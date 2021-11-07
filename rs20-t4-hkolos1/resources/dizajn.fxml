@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
+    <tabs>
+        <Tab closable="false" text="Artikli">
+            <content>
+                <GridPane hgap="20.0" vgap="30.0">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <TextArea fx:id="unijeti" prefHeight="200.0" prefWidth="200.0" text="HLB001,Crni hljeb,1&#10;HLB002,Bijeli hljeb,1.20&#10;MLK001,Mlijeko Meggle,1.10" />
+                        <TextArea fx:id="bezdupli" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <Button fx:id="dugme" mnemonicParsing="false" onAction="#artiklibezduplih" text="Dodaj Artikle" GridPane.columnIndex="1" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="20.0" right="50.0" top="10.0" />
+                    </padding>
+                </GridPane>
+            </content>
+        </Tab>
+        <Tab fx:id="check" closable="false" text="Račun">
+            <content>
+                <GridPane hgap="20.0" vgap="30.0">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Artikal:" />
+                        <ChoiceBox fx:id="choice" prefWidth="150.0" GridPane.columnIndex="1">
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </ChoiceBox>
+                        <Label text="Količina:" GridPane.rowIndex="1" />
+                        <Spinner fx:id="K" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Spinner>
+                        <Button fx:id="DUGME" mnemonicParsing="false" onAction="#Racun" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <TextArea fx:id="ukupniracun" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="15.0" />
+                            </GridPane.margin>
+                        </TextArea>
+                        <Label text="Aktuelni račun:" GridPane.rowIndex="3" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                    </padding></GridPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

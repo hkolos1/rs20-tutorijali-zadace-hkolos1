@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root" alignment="center" hgap="10" style="-fx-background-color: lightblue;" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <stylesheets>
+        <URL value="@dizajn.css" />
+    </stylesheets>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+
+    <children>
+        <VBox GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+            <children>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setText" text="Say 'Hello World!" />
+                <Label fx:id="helloWorld" alignment="CENTER" contentDisplay="CENTER"
+                       maxWidth="1.7976931348623157E308" styleClass="sakrij" />
+            </children>
+
+            <padding>
+                <Insets bottom="10.0" right="10.0" top="10.0" />
+            </padding>
+
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </VBox>
+    </children>
+
+</GridPane>
