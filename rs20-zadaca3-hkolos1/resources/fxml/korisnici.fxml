@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/korisnici.css" />
+    </stylesheets>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints />
+        <ColumnConstraints hgrow="ALWAYS" />
+      <ColumnConstraints hgrow="ALWAYS" />
+      <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+      <RowConstraints vgrow="ALWAYS" />
+      <RowConstraints />
+    </rowConstraints>
+    <children>
+        <ListView fx:id="listKorisnici" prefHeight="100.0" prefWidth="200.0" GridPane.rowSpan="8" />
+        <Label text="Ime: " GridPane.columnIndex="1" />
+      <ImageView fx:id="imeImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+        <TextField fx:id="fldIme" GridPane.columnIndex="2" />
+        <Label text="Prezime:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ImageView fx:id="prezimeImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <TextField fx:id="fldPrezime" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label text="E-mail:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ImageView fx:id="emailImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <TextField fx:id="fldEmail" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="Godina rođenja:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Slider fx:id="sliderGodinaRodjenja" majorTickUnit="10.0" max="2019.0" min="1920.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2000.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <ImageView fx:id="godinaImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Label text="Korisničko ime:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="fldUsername" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <ImageView fx:id="userImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <Label text="Lozinka:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <PasswordField fx:id="fldPassword" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <ImageView fx:id="passImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Label text="Ponovi lozinku:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <PasswordField fx:id="fldPasswordRepeat" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <ImageView fx:id="repeatImg" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Label text="Administrator: " GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <CheckBox mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="9">
+            <buttons>
+            <Button fx:id="btnObrisi" mnemonicParsing="false" onAction="#obrisiAction" text="Obriši">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/edit-delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnGenerisi" mnemonicParsing="false" onAction="#generisiAction" text="Generiši" />
+                <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#dodajAction" text="Dodaj">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/list-add.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnKraj" cancelButton="true" mnemonicParsing="false" onAction="#krajAction" text="Kraj">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/application-exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            </buttons>
+        </ButtonBar>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>

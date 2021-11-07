@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.ZadacaController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="58.0" minWidth="58.0" prefWidth="58.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="53.0" minWidth="53.0" prefWidth="53.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="44.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="54.0" minHeight="38.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="38.0" minHeight="38.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="41.0" minHeight="41.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="70.0" minHeight="48.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TextField fx:id="fldText" alignment="CENTER_RIGHT" editable="false" maxHeight="25.0" maxWidth="43.0" minHeight="25.0" minWidth="43.0" prefHeight="25.0" prefWidth="43.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        <Slider fx:id="sliderStudents" max="15.0" maxHeight="38.0" maxWidth="108.0" min="5.0" minHeight="38.0" minWidth="108.0" prefHeight="38.0" prefWidth="108.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.columnSpan="2">
+            <GridPane.margin>
+                <Insets right="5.0" top="12.0" />
+            </GridPane.margin></Slider>
+        <ListView fx:id="lvStudents" prefHeight="253.0" prefWidth="220.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="7">
+            <GridPane.margin>
+                <Insets bottom="3.0" left="3.0" top="10.0" />
+            </GridPane.margin>
+        </ListView>
+        <ChoiceBox fx:id="choiceColor" maxHeight="25.0" maxWidth="118.0" minHeight="25.0" minWidth="118.0" onAction="#obojiTipke" prefHeight="25.0" prefWidth="118.0" GridPane.columnIndex="3" GridPane.columnSpan="2">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Default" />
+                    <String fx:value="Crvena" />
+                    <String fx:value="Zelena" />
+                    <String fx:value="Plava" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Button fx:id="unosStudenta" maxHeight="25.0" maxWidth="81.0" minHeight="25.0" minWidth="81.0" mnemonicParsing="false" onAction="#unosStudenta" prefHeight="25.0" prefWidth="81.0" text="Unos studenta" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets right="15.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="10.0" />
+            </font></Button>
+        <Button fx:id="dugme0" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#nulaAction"  prefHeight="38.0" prefWidth="50.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets bottom="5.0" top="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme1" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#jedanAction" prefHeight="38.0" prefWidth="50.0" text="1" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="5.0" right="3.0" top="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme2" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#dvaAction" prefHeight="38.0" prefWidth="50.0" text="2" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme3" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#triAction" prefHeight="38.0" prefWidth="50.0" text="3" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="3.0" top="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme4" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#cetriAction" prefHeight="38.0" prefWidth="50.0" text="4" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="5.0" right="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme5" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#petAction" prefHeight="38.0" prefWidth="50.0" text="5" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+        <Button fx:id="dugme6" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#sestAction" prefHeight="38.0" prefWidth="50.0" text="6" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="3.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme7" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#sedamAction" prefHeight="38.0" prefWidth="50.0" text="7" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="3.0" left="5.0" right="3.0" top="5.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme8" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#osamAction" prefHeight="38.0" prefWidth="50.0" text="8" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="3.0" top="5.0" />
+            </GridPane.margin></Button>
+        <Button fx:id="dugme9" maxHeight="38.0" maxWidth="50.0" minHeight="38.0" minWidth="50.0" mnemonicParsing="false" onAction="#devetAction" prefHeight="38.0" prefWidth="50.0" text="9" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="3.0" left="3.0" right="5.0" top="5.0" />
+            </GridPane.margin></Button>
+    </children>
+</GridPane>
