@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="396.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.zadaca5.Controller">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="menuOptions" mnemonicParsing="false" text="Opcije">
+                    <items>
+                        <RadioMenuItem fx:id="menuDb" mnemonicParsing="false" onAction="#switchDb" selected="true" text="SQLite" />
+                        <RadioMenuItem fx:id="menuXml" mnemonicParsing="false" onAction="#switchXml" text="XML" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="ownersTab" text="Vlasnici">
+                    <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                            <top>
+                                <HBox prefHeight="27.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Label prefHeight="16.0" prefWidth="61.0" text="Pretraga:">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin></Label>
+                                        <TextField />
+                                        <Button fx:id="tbAddOwner" mnemonicParsing="false" onAction="#addOwnerAction" text="" />
+                                        <Button fx:id="tbRemoveOwner" mnemonicParsing="false" onAction="#removeOwnerAction" text="" />
+                                        <Button fx:id="tbEditOwner" mnemonicParsing="false" text="" />
+                                    </children>
+                                    <BorderPane.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </BorderPane.margin>
+                                </HBox>
+                            </top>
+                            <center>
+                                <TableView fx:id="tableOwners" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="colOwnerId" prefWidth="50.0" text="ID" />
+                                        <TableColumn fx:id="colNameSurname" prefWidth="150.0" text="Ime i prezime" />
+                                        <TableColumn fx:id="colJmbg" prefWidth="150.0" text="JMBG" />
+                                    </columns>
+                                </TableView>
+                            </center>
+                        </BorderPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="vehiclesTab" text="Vozila">
+                    <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                            <top>
+                                <HBox prefHeight="16.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Label prefHeight="28.0" prefWidth="61.0" text="Pretraga:" />
+                                        <TextField />
+                                        <Button fx:id="tbAddVehicle" mnemonicParsing="false" onAction="#addVehicleAction" text="" />
+                                        <Button fx:id="tbRemoveVehicle" mnemonicParsing="false" onAction="#removeVehicleAction" text="" />
+                                        <Button fx:id="tbEditVehicle" mnemonicParsing="false" text="" />
+                                    </children>
+                                    <BorderPane.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </BorderPane.margin>
+                                </HBox>
+                            </top>
+                            <center>
+                                <TableView fx:id="tableVehicles" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                                        <TableColumn fx:id="colManufacturer" prefWidth="100.0" text="Proizvođač" />
+                                        <TableColumn fx:id="colModel" prefWidth="100.0" text="Model" />
+                                        <TableColumn fx:id="colChasisNumber" prefWidth="100.0" text="Broj šasije" />
+                                        <TableColumn fx:id="colPlateNumber" prefWidth="100.0" text="Broj tablica" />
+                                    </columns>
+                                </TableView>
+                            </center>
+                        </BorderPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
